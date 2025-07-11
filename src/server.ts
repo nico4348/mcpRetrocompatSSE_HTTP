@@ -1,4 +1,3 @@
-import express, { Request, Response } from "express";
 import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { carrerasProfesionales } from "./features/resources/test.js";
 import { uniformesProgramasTecnicosTool } from "./features/tools/uniformesProgramasTecnicosTool.js";
@@ -52,11 +51,13 @@ import { costosProgramasProfesionalesTool } from "./features/tools/costosProgram
 import { costosPosgradoTool } from "./features/tools/costosPosgradoTool.js";
 import { conveniosInternacionalesTool } from "./features/tools/conveniosInternacionalesTool.js";
 import { beneficiosTool } from "./features/tools/beneficiosTool.js";
-
-import cors from "cors";
 import { TransportManager } from "./configs/transports/transportManager.js";
 import { handleStreamableHttpRequest } from "./configs/transports/streamableHttpTransport";
 import { handleSseRequest, handleSsePostRequest } from "./configs/transports/sseTransport";
+import express, { Request, Response } from "express";
+import cors from "cors";
+
+const PORT = process.env.PORT || 3000;
 
 const getServer = () => {
 	const server = new McpServer(
@@ -156,7 +157,7 @@ app.get("/", (req: Request, res: Response) => {
 			{
 				name: "Streamable HTTP",
 				version: "2025-03-26",
-				endpoint: "/mcp",
+				endpoint: `{${URL}}/mcp`,
 			},
 			{
 				name: "HTTP+SSE (deprecated)",
@@ -169,7 +170,6 @@ app.get("/", (req: Request, res: Response) => {
 	});
 });
 
-const PORT = 3002;
 app.listen(PORT, () => {
 	console.log(`🚀 Servidor MCP compatible ejecutándose en puerto ${PORT}`);
 	console.log(`

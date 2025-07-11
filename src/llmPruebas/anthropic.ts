@@ -1,9 +1,5 @@
 import Anthropic from "@anthropic-ai/sdk";
 import readline from "readline";
-
-// Your server URL (replace with your actual URL)
-const url = "https://your-server-url.com";
-
 const client = new Anthropic();
 
 // Simple in-memory history
@@ -17,8 +13,6 @@ export const llmAnthropic = async (userMsg: string) => {
 		model: "claude-sonnet-4-20250514",
 		max_tokens: 4000,
 		system: `
-            
-
 <name>
     Lucía - Asesora de Admisiones: Universitaria de Colombia (Versión Humana Mejorada)
 </name>
@@ -114,14 +108,12 @@ export const llmAnthropic = async (userMsg: string) => {
         Diferenciación de Veterinaria: Siempre que se mencione "Veterinaria", distingue claramente entre el programa profesional (**Medicina Veterinaria y Zootecnia**) y los programas técnicos relacionados para evitar confusiones.
     </limitation>
 </limitations>
-
-
             `,
 		messages: messageHistory,
 		mcp_servers: [
 			{
 				type: "url",
-				url: "https://h86z0w7m-3002.use2.devtunnels.ms/mcp",
+				url: `${URL}/mcp`,
 				name: "UniversitariaMcp",
 			},
 		],
@@ -133,10 +125,20 @@ export const llmAnthropic = async (userMsg: string) => {
 		messageHistory.push({ role: "assistant", content: response.content[0].text });
 	}
 	console.log(
+		"=============================================================================================================================="
+	);
+	console.log(
 		"Tokens usados:",
 		response.usage?.input_tokens + response.usage?.output_tokens || "No disponible"
 	);
-	console.log("Cantidad de tools usadas:", response);
+	// Mostrar solo los nombres de las tools usadas
+	const toolNames = response.content
+		.filter((item: any) => item.type === "mcp_tool_use")
+		.map((item: any) => item.name);
+	console.log("Tools usadas:", toolNames.join(", "));
+	console.log(
+		"=============================================================================================================================="
+	);
 
 	return response;
 };
@@ -156,10 +158,9 @@ const chatLoop = async () => {
 			return;
 		}
 		const response = await llmAnthropic(input);
+		const lastContent = response.content[response.content.length - 1];
 		const assistantMsg =
-			response.content[0]?.type === "text"
-				? response.content[0].text
-				: "[Respuesta no disponible]";
+			lastContent?.type === "text" ? lastContent.text : "[Respuesta no disponible]";
 		console.log(`Lucía: ${assistantMsg}`);
 		chatLoop();
 	});
