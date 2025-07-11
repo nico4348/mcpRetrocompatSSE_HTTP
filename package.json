@@ -14,11 +14,12 @@
     "test-both": "node dist/test-both-protocols.js"
   },
   "dependencies": {
+    "@anthropic-ai/sdk": "^0.56.0",
     "@modelcontextprotocol/sdk": "^1.15.0",
-    "express": "^5.0.1",
     "cors": "^2.8.5",
-    "zod": "^3.23.8",
-    "eventsource": "^3.0.2"
+    "eventsource": "^3.0.2",
+    "express": "^5.0.1",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/express": "^5.0.0",
