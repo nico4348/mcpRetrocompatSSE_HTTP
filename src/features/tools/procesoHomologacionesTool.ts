@@ -14,7 +14,11 @@ export function procesoHomologacionesTool(server: McpServer) {
 						type: "text",
 						text: `
                     Proceso de Homologaciones
-Este trámite se realiza exclusivamente por modalidad virtual y está dirigido únicamente a estudiantes profesionales colombianos. (Temporalmente, no es posible realizar la homologación para las carreras profesionales de Medicina veterinaria y zootecnia , debido a que estas son nuevas en la universidad).
+Este trámite se realiza exclusivamente por modalidad virtual y está dirigido únicamente a estudiantes profesionales colombianos. 
+El proceso de homologacion para Medicina Veterinaria y Zootecnia no se hace de forma virtual sino que debe hacerse presencial.
+Proceso Exclusivo para Medicina Veterinaria y Zootecnia. Si se desea homologar, deberá ser presencial en la sede administrativa que queda en: Cra. 7 #35-85, Bogotá
+
+
 Requisitos Previos y Obligatorios
 Para el programa de Derecho:
 

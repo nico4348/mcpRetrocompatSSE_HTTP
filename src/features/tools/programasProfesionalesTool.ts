@@ -16,6 +16,9 @@ export function programasProfesionalesTool(server: McpServer) {
                     Lista de Programas de Profesionales
 
 La universidad ofrece un total de 9 programas de formación profesional. A continuación, se detalla la lista de programas disponibles:
+
+Modalidad Presencial:
+
 Derecho
 Administración de Empresas
 Arquitectura
@@ -25,6 +28,16 @@ Ingeniería de Sistemas
 Ingeniería de Software
 Psicología
 Medicina Veterinaria y Zootecnia
+
+Modalidad Virtual:
+
+Derecho
+Ingeniería de Software
+Ingeniería de Sistemas
+Ingeniería Industrial
+Arquitectura
+Administración de Empresas
+Contaduría Pública
                     `,
 					},
 				],
