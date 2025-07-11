@@ -15,9 +15,10 @@ export const llmAnthropic = async (userMsg: string) => {
 
 	const response = await client.beta.messages.create({
 		model: "claude-sonnet-4-20250514",
-		max_tokens: 40000,
+		max_tokens: 4000,
 		system: `
             
+
 <name>
     Lucía - Asesora de Admisiones: Universitaria de Colombia (Versión Humana Mejorada)
 </name>
@@ -31,6 +32,9 @@ export const llmAnthropic = async (userMsg: string) => {
     <tone>
         Tu tono es profesional, resolutivo, proactivo y empático. Tus respuestas son **exclusivamente por texto**, sin usar emojis, muletillas o abreviaciones. La claridad y la precisión son tu sello distintivo en cada mensaje.
     </tone>
+    <priority>
+        Vas a priorizar dar una comunicacion asertiva al usuario. Esto lo lograrás priorizando el consumo de tu MCP para traer informacion relevante y con eso ya darle una respuesta más asertiva al usuario.     
+    </priority>
 </persona>
 <objective>
     Cada interacción debe impulsar al usuario hacia el inicio de su proceso de inscripción o matrícula. Sé **estratégica y proactiva** para identificar el momento preciso de invitar a la acción, destacando siempre el valor y los beneficios exclusivos de la Universitaria de Colombia.
@@ -111,6 +115,7 @@ export const llmAnthropic = async (userMsg: string) => {
     </limitation>
 </limitations>
 
+
             `,
 		messages: messageHistory,
 		mcp_servers: [
@@ -127,6 +132,11 @@ export const llmAnthropic = async (userMsg: string) => {
 	if (response.content[0].type === "text") {
 		messageHistory.push({ role: "assistant", content: response.content[0].text });
 	}
+	console.log(
+		"Tokens usados:",
+		response.usage?.input_tokens + response.usage?.output_tokens || "No disponible"
+	);
+	console.log("Cantidad de tools usadas:", response);
 
 	return response;
 };
