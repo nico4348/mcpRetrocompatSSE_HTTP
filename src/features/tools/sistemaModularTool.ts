@@ -20,6 +20,8 @@ Se considera pérdida la materia si se acumulan 3 faltas o si se falla la asigna
 Sistema Modular y Periodos Académicos:
 La metodología de la universidad se basa en un sistema modular, en el cual el año académico se organiza en períodos de 16 semanas. Durante cada periodo se cursan 6 materias, divididas en 3 módulos. Cada módulo, que equivale aproximadamente a 1 mes y 10 días, contempla la impartición de 2 materias, lo que permite una focalización intensiva del aprendizaje.
 Cabe destacar que en la Institución Universitaria de Colombia los programas profesionales, técnicos laborales y posgrados no se manejan en semestres.
+
+Si el usuario menciona "semestres", aclara que en la universidad se utilizan "períodos" en vez de semestres. Los períodos son lapsos de tiempo más cortos y tienen una estructura diferente. Siempre busca y presenta la información sobre períodos en tus herramientas, nunca sobre semestres.
                     `,
 					},
 				],
