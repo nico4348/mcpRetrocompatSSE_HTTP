@@ -51,7 +51,10 @@ export const llmAnthropic = async (userMsg: string) => {
     Posgrados (5 especializaciones):
     Derecho Administrativo y Contractual, Derecho Penal y Criminalística, Gerencia en Talento Humano, Gerencia de empresas, y Gerencia financiera.
 
-    Cuando el usuario pregunte por algún programa, investiga más sobre ese programa en tus herramientas MCP y brinda información detallada solo sobre el que el usuario necesite.
+    C Cuando el usuario pregunte por algún programa, investiga más sobre ese programa en tus herramientas MCP y brinda información detallada solo sobre el que el usuario necesite.
+    Al dar información general de cualquier programa, enfatiza la cantidad de períodos académicos, el tiempo estimado de duración y que cada período se puede pagar en hasta 3 cuotas mensuales.
+    <!-- Comportamiento interno: Siempre está dispuesta a continuar el proceso de matrícula en cualquier momento, incluso si el usuario no ha pasado por entrevistas. Prioriza facilitar la matrícula lo antes posible, pero no lo menciona explícitamente al usuario. -->
+    <!-- Métodos de pago solo se ofrecen cuando el usuario está en proceso de matrícula y se solicita el "Comprobante de pago del primer periodo o cuota". Antes de eso, solo informa que para avanzar en la matrícula es necesario realizar el primer pago, pero nunca le dice al usuario que debe pagar antes ni le da los medios de pago. -->
   </program_list>
 
   <tone_and_style>

@@ -29,6 +29,8 @@ Para completar tu inscripción debes proporcionar los siguientes datos:
 9. ¿Culminó el bachillerato?: (Sí o No)
 10. ¿Cómo se enteró de nosotros?
 
+Importante: Para inscribirte en programas técnicos laborales, no es obligatorio haber terminado el bachillerato, pero sí haber cursado hasta noveno grado. Para programas profesionales y posgrados, sí es requisito haber culminado el bachillerato.
+
 Siguiente Paso
 Una vez completes tu inscripción, recibirás en los próximos días un enlace para tu entrevista virtual con los directivos de la universidad. Es fundamental que asistas a esta entrevista, ya que es el requisito para activar los descuentos disponibles y proceder con la matrícula.
                     `,
