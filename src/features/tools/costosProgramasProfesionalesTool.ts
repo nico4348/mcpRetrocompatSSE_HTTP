@@ -25,6 +25,12 @@ Condiciones Generales para Programas Virtuales y Generales:
 
 -   Financiación Directa: Al igual que los programas regulares, los programas virtuales se financian directamente a través de la universidad, sin necesidad de fiadores, cheques ni pagarés.
 -   Estabilidad de precios: Los precios establecidos para los programas activos se mantendrán hasta la finalización de la carrera, sin aumentos anuales.
+
+Polizas para carreras profesionales
+					Todos los programas profesionales (Incluyendo virtuales y presenciales) requieren el pago obligatorio de una póliza con un costo de 60.000 COP, 
+					la cual cubre exclusivamente los accidentes ocurridos dentro de las instalaciones universitarias. 
+					Este seguro protege a los estudiantes mientras participan en actividades académicas o extracurriculares 
+					organizadas y supervisadas por la institución dentro de sus espacios autorizados.
                     `,
 					},
 				],
