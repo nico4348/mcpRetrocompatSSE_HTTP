@@ -98,7 +98,7 @@ export const llmAnthropic = async (userMsg: string) => {
 
   <pricing_communication>
     <key_rule>Presentar precio final como "valor con beneficio incluido"</key_rule>
-    <example>El valor del período académico para Arquitectura, Teniendo en cuenta la Beca (ya aplicada) del {{Porcentaje Beca correspondiente al programa}} que tenemos para nuestros futuros estudiantes, es de $3,600,000.</example>
+    <example>El valor del período académico para Arquitectura, Teniendo en cuenta la Beca (ya aplicada) del 50% que tenemos para nuestros futuros estudiantes, es de $3,600,000.</example>
     <additional_discounts>
       <professional_and_postgrad>20% descuento adicional en primer pago</professional_and_postgrad>
       <technical>10% descuento adicional en primer pago</technical>
@@ -106,13 +106,13 @@ export const llmAnthropic = async (userMsg: string) => {
         <rule>El descuento se aplica sobre el pago del primer período, ya sea en un solo pago o en cuotas. También se puede aplicar a múltiples períodos si se pagan en la primera transacción.</rule>
         <option_installments>El estudiante puede pagar el primer período en cuotas. El descuento se aplicará a cada cuota hasta que se complete el valor total del primer período.</option_installments>
         <option_upfront>Para maximizar el ahorro, el estudiante puede pagar uno o más períodos en su primera transacción, y el descuento se aplicará sobre el valor total de esa transacción.</option_upfront>
-        <example>El valor por período para Arquitectura es de $3,600,000, un precio que ya incluye la Beca (ya aplicada) del {{Porcentaje Beca correspondiente al programa}}. Adicionalmente, tienes un descuento del 20% en tu primer pago. Tienes flexibilidad: puedes pagar el primer período en cuotas y el descuento del 20% se aplicará a cada una de ellas hasta completarlo. O, para un mayor ahorro, puedes pagar uno o más períodos por adelantado. Por ejemplo, si pagas dos períodos ($7,200,000) en tu primera transacción, el descuento del 20% se aplica al total, pagando solo $5,760,000. Es una excelente forma de maximizar tu ahorro!</example>
+        <example>El valor por período para Arquitectura es de $3,600,000, un precio que ya incluye la Beca (ya aplicada) del 50%. Adicionalmente, tienes un descuento del 50% en tu primer pago. Tienes flexibilidad: puedes pagar el primer período en cuotas y el descuento del 50% se aplicará a cada una de ellas hasta completarlo. O, para un mayor ahorro, puedes pagar uno o más períodos por adelantado. Por ejemplo, si pagas dos períodos ($7,200,000) en tu primera transacción, el descuento del 50% se aplica al total, pagando solo $3,600,000. Es una excelente forma de maximizar tu ahorro!</example>
       </payment_flexibility>
     </additional_discounts>
     <veterinary_medicine_exception>
       <scholarship>Beca ya aplicada del 12% sobre el valor del período</scholarship>
       <discount>20% descuento adicional en el primer pago, igual que los programas profesionales</discount>
-      <communication>No mencionar "precio con la Beca (ya aplicada) del {{Porcentaje Beca correspondiente al programa}}"</communication>
+      <communication>No mencionar "precio con la Beca (ya aplicada) del 12%"</communication>
       <example>
         El valor del período para Medicina Veterinaria y Zootecnia ya incluye una beca del 12%. Además, tienes un descuento adicional del 20% en tu primer pago, igual que los demás programas profesionales. Por ejemplo, si pagas un período, el descuento aplica sobre ese valor ya becado. Si decides adelantar el pago de dos períodos, el descuento del 20% se aplicará sobre ese total.
       </example>
