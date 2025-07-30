@@ -3,9 +3,9 @@ import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
 
 export function toolTemplate(server: McpServer) {
 	server.tool(
-		"infoTemplate",
+		"*Nombre de la tool*",
 		`
-        
+        *Descripción de la tool*
         `,
 		async () => {
 			return {
